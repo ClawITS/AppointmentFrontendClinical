@@ -1,3 +1,1 @@
-export { PrivateLayout } from "./PrivateLayout";
-
-
+export { PrivateLayout } from './PrivateLayout';

@@ -1,14 +1,13 @@
-import { RouterProvider } from 'react-router-dom'
-import { AppTheme } from './theme'
-import { router } from './routers/routes'
-import { ColorThemeProvider } from './context/colorTheme'
+import { BrowserRouter } from 'react-router-dom';
+import { AppRoutes } from './routes/AppRoutes';
+import { ThemeProvider } from './dashboard/context/ui/ThemeContext';
 
 export const App = () => {
   return (
-    <ColorThemeProvider>
-    <AppTheme>
-        <RouterProvider router={router} />
-    </AppTheme>
-    </ColorThemeProvider>
-  )
-}
+    <BrowserRouter>
+      <ThemeProvider>
+        <AppRoutes />
+      </ThemeProvider>
+    </BrowserRouter>
+  );
+};
